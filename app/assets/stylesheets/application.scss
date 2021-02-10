@@ -16,3 +16,33 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+h1 {
+  font-size: 80px;
+  text-align: center;
+  letter-spacing: -1px;
+  margin-bottom: 3px;
+  margin-top: 0px;
+}
+
+h2{
+  text-align: center;
+}
+
+.form{
+  padding: 1em;
+  font-weight: bold;
+  border: dashed 2px #5b8bd0;
+  border-radius: 10px;
+
+  input, textarea{
+    border: 1px solid #bbb;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+
+.icon{
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
