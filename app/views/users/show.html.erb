@@ -1,0 +1,14 @@
+<section class="user_info">
+  <% if @user.present? %>
+    <%= image_tag @image.url, class: "icon", :size => "100x100" %>
+  <% end %>
+  <%= @user.username %>
+  <%= @profile %>
+  <%= render 'relationships/follow_button', user: @user %>
+  <% if @user == current_user %>
+    <div>
+      <%= link_to "Edit profile", edit_user_path(current_user) %>
+      <%= link_to "Delete account", user_path, method: :delete, data: { confirm: "アカウントを削除しますか?" }%>
+    </div>
+  <% end %>
+</section>
