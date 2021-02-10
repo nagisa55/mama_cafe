@@ -25,3 +25,20 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+#無視するファイル
+.DS_Store
+/vendor/*
+/tests
+/bin
+/lib
+/public
+/test
+/log
+/assets
+/channels
+/helpers
+/jobs
+/tmp
+/storage
+/package.json
