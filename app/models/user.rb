@@ -8,4 +8,7 @@ class User < ApplicationRecord
   validates :profile, length: { maximum: 250 }
   mount_uploader :image, ImageUploader
   has_secure_password
+
+  has_many :posts
+  has_many :comments
 end

@@ -1,0 +1,10 @@
+<h2>新規投稿</h2>
+<%= form_with(model:@post, local:true) do |f| %>
+  <div>
+    <%= f.text_area :content %>
+  </div>
+  <%= f.file_field :photo, accept: 'image/jpeg, image/png' %>
+  <div>
+  <%= f.submit "投稿する", class: "btn btn-primary" %>
+  </div>
+<% end %>
