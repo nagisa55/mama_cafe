@@ -12,3 +12,8 @@
     </div>
   <% end %>
 </section>
+<div>
+  <% @posts.each do |post| %>
+    <%= link_to ( image_tag ( post.photo.url if post.photo?)), post_path %>
+  <% end %>
+</div>
