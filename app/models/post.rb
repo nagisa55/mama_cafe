@@ -6,4 +6,19 @@ class Post < ApplicationRecord
   mount_uploader :photo, PhotoUploader
 
   has_many :comments
+
+  has_many :favorites, dependent: :destroy
+  has_many :favorite_users, through: :favorites, source: :user
+
+  def like(user)
+    favorites.create(user_id: user.id)
+  end
+
+  def unlike(user)
+    favorites.find_by(user_id: user.id).destroy
+  end
+
+  def like?(user)
+    favorite_users.include?(user)
+  end
 end

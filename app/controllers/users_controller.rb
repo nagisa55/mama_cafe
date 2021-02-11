@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @image = @user.image
     @profile = @user.profile
+    @posts = @user.posts.all
   end
 
   def create
