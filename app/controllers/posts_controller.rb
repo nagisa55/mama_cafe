@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = current_user.posts.build(post_params)
+    @post = current_user.posts.build(micropost_params)
     if @post.save
       flash[:success] = "投稿しました。"
       redirect_to @user
