@@ -1,5 +1,10 @@
 <% if logged_in? %>
-  タイムライン
+  <% if @posts.any? %>
+    <% @posts.each do |post| %>
+      <%= image_tag post.photo.url if post.photo %>
+    <% end %>
+    <%= paginate @posts %>
+  <% end %>
 <% else %>
   <div class="container">
     <div class="center jumbotron">
