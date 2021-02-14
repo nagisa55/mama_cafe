@@ -16,3 +16,7 @@
 //= require_tree .
 //= require jquery
 //= require bootstrap-sprockets
+
+$(function(){
+  $(".alert").slideUp(3000);
+});
