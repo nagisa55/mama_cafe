@@ -6,11 +6,11 @@
     <%= paginate @posts %>
   <% end %>
 <% else %>
-  <div class="container">
-    <div class="center jumbotron">
+  <div class="jumbotron jumbotron-extend">
+    <div class="container-fluid jumbotron-container">
       <h1>Mama Cafe</h1>
-      <%= link_to "ログイン", login_path %>
-      <p>新規登録は<%= link_to "こちら", signup_path %>から</p>
+      <p><%= link_to "はじめる", login_path, class: 'btn' %></p>
+      <p><%= link_to "Mama cafe とは？", detail_path, class: 'btn' %></p>
     </div>
   </div>
 <% end %>

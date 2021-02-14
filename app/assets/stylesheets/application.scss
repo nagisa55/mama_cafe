@@ -17,13 +17,33 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-h1 {
-  font-size: 80px;
-  text-align: center;
-  letter-spacing: -1px;
-  margin-bottom: 3px;
-  margin-top: 0px;
+.jumbotron-extend{
+  position: relative;
+  height: 100vh;
+  min-height: 300px;
+  background-image: image-url('topimage.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  h1 {
+    font-size: 100px;
+    letter-spacing: -1px;
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .jumbotron-container{
+    position: relative;
+    top: 10%;
+    transform: translateY(-50%);
+  }
+
+  .btn{
+    background-color: white;
+  }
+
 }
+
 
 h2{
   text-align: center;

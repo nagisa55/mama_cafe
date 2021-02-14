@@ -5,4 +5,7 @@ class ToppagesController < ApplicationController
       @posts = current_user.feed_posts.order(id: :desc).page(params[:page]).per(12)
     end
   end
+
+  def show
+  end
 end
