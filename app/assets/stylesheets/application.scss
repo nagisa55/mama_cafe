@@ -34,16 +34,20 @@
 
   .jumbotron-container{
     position: relative;
-    top: 10%;
+    top: 6%;
     transform: translateY(-50%);
   }
 
   .btn{
     background-color: white;
   }
-
 }
 
+.navbar-nav{
+  cursor: pointer !important;
+  font-size: medium;
+
+}
 
 h2{
   text-align: center;
