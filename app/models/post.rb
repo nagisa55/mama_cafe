@@ -3,7 +3,8 @@ class Post < ApplicationRecord
   validates :user_id, presence: true
   validates :content, presence: true, length: { maximum:250 }
   validates :photo, presence: true
-  mount_uploader :photo, PhotoUploader
+  has_many :cafe_images, dependent: :destroy
+  accepts_nested_attributes_for :cafe_images, allow_destroy: true
 
   has_many :comments
 

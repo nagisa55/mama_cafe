@@ -1,10 +1,40 @@
 <h2>新規投稿</h2>
-<%= form_with(model:@post, local:true) do |f| %>
-  <div>
-    <%= f.text_area :content %>
-  </div>
-  <%= f.file_field :photo, accept: 'image/jpeg, image/png' %>
-  <div>
-  <%= f.submit "投稿する", class: "btn btn-primary" %>
-  </div>
-<% end %>
+<div class="main">
+  <section class="main__block">
+    <%= form_with(model:@post, local:true) do |f| %>
+      <div class="sell__block__form">
+        <div class="sell__block__form__upload">
+          <h3 class="sell__block__form__upload__head">
+          カフェ写真
+          </h3>
+          <p>最大5枚までアップロードできます</p>
+          <div class="post__drop__box__container">
+            <div class="prev-content">
+            </div>
+            <div class="label-content">
+              <label for="item_images_attributes_0_image" class="label-box" id="label-box--0">
+                <pre class="label-box__text-visible"> クリックしてファイルをアップロード </pre>
+              </label>
+              <div class="hidden-content">
+                <%= f.fields_for :cafe_images, @post.cafe_images.build do |i| %>
+                  <%= i.file_field :photo, class: "hidden-field" %>
+                  <input class="hidden-field" type="file" name="item[images_attributes][1][image]" id="item_images_attributes_1_image" >
+                  <input class="hidden-field" type="file" name="item[images_attributes][2][image]" id="item_images_attributes_2_image" >
+                  <input class="hidden-field" type="file" name="item[images_attributes][3][image]" id="item_images_attributes_3_image" >
+                  <input class="hidden-field" type="file" name="item[images_attributes][4][image]" id="item_images_attributes_4_image" >
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <%= f.text_area :content %>
+      </div>
+      <div>
+        <%= f.submit "投稿する", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </secion>
+</div>
+
