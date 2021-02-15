@@ -1,7 +1,7 @@
 <% if logged_in? %>
   <% if @posts.any? %>
     <% @posts.each do |post| %>
-      <%= image_tag post.photo.url if post.photo %>
+     <%# コメントアウト <%= image_tag post.photo.url if post.photo %>
     <% end %>
     <%= paginate @posts %>
   <% end %>
